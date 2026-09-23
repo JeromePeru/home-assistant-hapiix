@@ -1,0 +1,1 @@
+# Hapiix pour Home Assistant
