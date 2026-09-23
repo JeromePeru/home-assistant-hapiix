@@ -1,0 +1,11 @@
+{
+  "domain": "hapiix",
+  "name": "Hapiix",
+  "codeowners": ["@JeromePeru"],
+  "config_flow": true,
+  "documentation": "https://github.com/JeromePeru/home-assistant-hapiix",
+  "integration_type": "hub",
+  "iot_class": "cloud_polling",
+  "requirements": [],
+  "version": "1.0.1"
+}
