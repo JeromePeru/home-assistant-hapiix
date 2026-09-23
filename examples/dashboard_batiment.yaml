@@ -1,0 +1,103 @@
+title: Batiment
+views:
+  - title: Batiment
+    path: batiment
+    icon: mdi:office-building
+    type: sections
+    max_columns: 2
+    dense_section_placement: true
+    sections:
+      - type: grid
+        cards:
+          - type: markdown
+            text_only: true
+            content: |
+              # 🏢 Batiment
+              **Bienvenue chez vous**
+
+              Gérez vos accès Hapiix en toute simplicité.
+            grid_options:
+              columns: full
+
+      - type: grid
+        cards:
+          - type: heading
+            heading: En un coup d’œil
+            heading_style: title
+            icon: mdi:view-dashboard-outline
+          - type: tile
+            entity: sensor.votre_capteur_hapiix_membres
+            name: Membres
+            icon: mdi:account-group
+            color: blue
+            vertical: true
+            features_position: bottom
+            grid_options:
+              columns: 6
+              rows: 2
+          - type: tile
+            entity: sensor.votre_capteur_hapiix_messages
+            name: Messages reçus
+            icon: mdi:message-text-outline
+            color: amber
+            vertical: true
+            features_position: bottom
+            grid_options:
+              columns: 6
+              rows: 2
+
+      - type: grid
+        cards:
+          - type: heading
+            heading: Accès sécurisé
+            heading_style: title
+            icon: mdi:shield-lock-outline
+          - type: tile
+            entity: button.votre_premiere_porte_hapiix
+            name: Première porte
+            icon: mdi:door-open
+            color: green
+            vertical: true
+            hide_state: true
+            tap_action:
+              action: perform-action
+              perform_action: button.press
+              target:
+                entity_id: button.votre_premiere_porte_hapiix
+              confirmation:
+                title: Ouvrir la première porte ?
+                text: Cette action envoie une demande d'ouverture physique à Hapiix.
+                confirm_text: Ouvrir
+                dismiss_text: Annuler
+            hold_action:
+              action: none
+            double_tap_action:
+              action: none
+            grid_options:
+              columns: 6
+              rows: 3
+          - type: tile
+            entity: button.votre_deuxieme_porte_hapiix
+            name: Deuxième porte
+            icon: mdi:door-open
+            color: green
+            vertical: true
+            hide_state: true
+            tap_action:
+              action: perform-action
+              perform_action: button.press
+              target:
+                entity_id: button.votre_deuxieme_porte_hapiix
+              confirmation:
+                title: Ouvrir la deuxième porte ?
+                text: Cette action envoie une demande d'ouverture physique à Hapiix.
+                confirm_text: Ouvrir
+                dismiss_text: Annuler
+            hold_action:
+              action: none
+            double_tap_action:
+              action: none
+            grid_options:
+              columns: 6
+              rows: 3
+    header: {}
