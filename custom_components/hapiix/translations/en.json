@@ -1,0 +1,42 @@
+{
+  "title": "Hapiix",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to Hapiix",
+        "description": "Enter the e-mail address registered with Hapiix. A one-time code will be sent to it.",
+        "data": { "email": "E-mail address" }
+      },
+      "code": {
+        "title": "Enter the Hapiix code",
+        "description": "Enter the code sent to {email}.",
+        "data": { "code": "Code" }
+      },
+      "reauth_confirm": {
+        "title": "Reconnect Hapiix",
+        "description": "The Hapiix connection for {email} has expired. Continue to receive a new code."
+      },
+      "reauth_code": {
+        "title": "Enter the new Hapiix code",
+        "description": "Enter the code sent to {email}.",
+        "data": { "code": "Code" }
+      }
+    },
+    "error": {
+      "cannot_connect": "Unable to connect to Hapiix.",
+      "invalid_auth": "The code is invalid or expired.",
+      "request_failed": "Hapiix rejected the request. Check the account and try again."
+    },
+    "abort": {
+      "already_configured": "This Hapiix account is already configured.",
+      "flow_expired": "The configuration session expired. Please start again.",
+      "reauth_successful": "Hapiix authentication was renewed."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "members": { "name": "Members" },
+      "messages": { "name": "Messages" }
+    }
+  }
+}
