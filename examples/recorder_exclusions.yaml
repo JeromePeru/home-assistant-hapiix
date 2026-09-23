@@ -1,0 +1,7 @@
+# Exemple facultatif à intégrer dans /config/configuration.yaml.
+# Remplacer les deux identifiants par les identifiants réels des capteurs Hapiix.
+recorder:
+  exclude:
+    entities:
+      - sensor.votre_capteur_hapiix_membres
+      - sensor.votre_capteur_hapiix_messages
